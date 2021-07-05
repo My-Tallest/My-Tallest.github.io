@@ -8,6 +8,7 @@ google-ID: ''
 
 menu:
 - {name: 'Posts',       url: 'sample-posts'}
+- {name: 'Bot',       url: 'Chatbot'}
 - {name: 'About',              url: 'about'}
 - {name: 'Contact',            url: 'contact'}
 
