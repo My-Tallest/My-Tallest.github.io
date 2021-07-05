@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Chatbot"
-author: "Paul Le"
+title: "New Sandra bot"
+author: "Tallest"
 categories: sample
 tags: [documentation,sample]
 image: sandra-1.jpg
