@@ -4,6 +4,6 @@ title: "Getting Started"
 author: "Paul Le"
 categories: sample
 tags: [documentation,sample]
-image: city-1.jpg
+image: arctic-2.jpg
 ---
 
