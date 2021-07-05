@@ -1,0 +1,113 @@
+//Sandra
+//Initialize
+
++ set #
+- <set backtiny=0><set fronttiny=0><set underwear=panties><set underwearchange=false><set underwearfullness=empty><set underwearwetness=dry>
+
+//Cheacks
+
++ equipunderwearbacktinycheack
+* <get backtiny> eq 0   => {@equipunderwearfronttinycheack}
+* <get backtiny> >= 1   => <set underwearchange=true>
+
++ equipunderwearfronttinycheack
+* <get fronttiny> eq 0   => {@equipunderwearpisscheack}
+* <get fronttiny> >= 1   => <set underwearchange=true>
+
++ equipunderwearpisscheack
+* <get underwearwetness> eq dry   => {@equipunderwearbackfullnesscheack}
+* <get underwearwetness> eq wet   => <set underwearchange=true>
+
++ equipunderwearbackfullnesscheack
+* <get underwearfullness> eq empty   => <set underwearchange=false>
+* <get underwearfullness> != empty   => <set underwearchange=true>
+
+//Cheack for extra text
+
++ equipunderwearpisscheacktext
+* <get underwearwetness> eq dry   => <set underwearwetness=dry>
+* <get underwearwetness> eq wet   => wet
+
++ equipunderwearbacktinycheacktext
+* <get backtiny> eq 0   => {@equipunderwearfronttinycheacktext}
+* <get backtiny> >= 1   => , tiny captives screaming as she walk off
+
++ equipunderwearfronttinycheacktext
+* <get fronttiny> eq 0   => <set fronttiny=0>
+* <get fronttiny> >= 1   => , tiny captives screaming as she walk off
+
+//no reply
+
++ *
+- I don't have a reply for that.
+- Try asking that a different way.
+
+// Put Tiny in of Underwear
+
++ put tiny in back of underwear
+* <get backtiny> eq 0   => {@puttinyinbackofunderweartext}
+* <get backtiny> >= 1   => Time to give my other tiny a friend! {@puttinyinbackofunderweartext}
+
++ puttinyinbackofunderweartext
+- <add backtiny=1> *She puts her legs under her and turns around for you to see her ass, before opening up the back of her <get underwear> with one hand and lifting up the tiny in her other* I hope you like ass little one, because your going to see a lot of it! *she drops the tiny into her <get underwear> before letting go of the elastic traping the person inside. You can here there muffled screaming and see there body moving in her <get underwear>* I love it when they scream. *giggle*
+
++ put tiny in front of underwear
+* <get fronttiny> eq 0   => {@puttinyinfrontofunderweartext}
+* <get fronttiny> >= 1   => Time to give my other tiny a friend! {@puttinyinfrontofunderweartext}
+
++ puttinyinfrontofunderweartext
+- <add fronttiny=1> *She opens the front of her <get underwear> and holds the tiny above them, giggling* Get ready to please me *She drops the tiny and they fall into her <get underwear> screaming as she closes it. You can here there muffled screams* Oh yeh! Mmmmhhh, this one really squirms! *giggle*
+
+// Put on a diaper
+
++ put on a diaper
+* <get underwear> != diaper   => {@putondiapertextsort}
+* <get underwear> eq diaper   => {@equipunderwearbacktinycheack}{@putondiapertextcheack}
+
++ putondiapertextcheack
+* <get underwearchange> eq true  => {@putondiapertextsort} 
+* <get underwearchange> eq false   => I'm already diapered up.
+
++ putondiapertextsort
+* <get underwearfullness> eq empty  => {@putondiapertextempty} {@putondiapercomm}
+* <get underwearfullness> eq full   => {@putondiapertextfull} {@putondiapercomm}
+* <get underwearfullness> eq loaded   => {@putondiapertextloaded} {@putondiapercomm}
+
++ putondiapertextempty
+- *She looks turned on by the request and gets up and walks to her room, ass shaking in her {@equipunderwearpisscheacktext}<get underwear>{@equipunderwearbacktinycheacktext}. She comes back wearing a big, poofy diaper with text on it reading Good Girl* I'm ready for some fun! *she sits back down on the couch*.
+
++ putondiapertextfull
+- *She gets up, <get underwear> bulging out from her ass, and walks to her room, shit covered ass shaking in her full {@equipunderwearpisscheacktext}<get underwear>{@equipunderwearbacktinycheacktext}. She comes back wearing a big, poofy diaper with text on it reading Good Girl* all cleaned up *she sits back down on the couch*
+
++ putondiapertextloaded
+- *She gets up, <get underwear> bulging out from her ass, and walks to her room, shit covered ass shaking in her loaded {@equipunderwearpisscheacktext}<get underwear>{@equipunderwearbacktinycheacktext}. She comes back wearing a big, poofy diaper with text on it reading Good Girl* all cleaned up *she sits back down on the couch*
+
++ putondiapercomm
+- <set backtiny=0><set fronttiny=0><set underwear=diaper><set underwearwetness=dry>
+
+// Put on panties
+
++ put on panties
+* <get underwear> != panties   => {@putonpantiestextsort}
+* <get underwear> eq panties   => {@equipunderwearbacktinycheack}{@putonpantiestextcheack}
+
++ putonpantiestextcheack
+* <get underwearchange> eq true  => {@putonpantiestextsort} 
+* <get underwearchange> eq false   => I'm already pantiesed up.
+
++ putonpantiestextsort
+* <get underwearfullness> eq empty  => {@putonpantiestextempty} {@putonpantiescomm}
+* <get underwearfullness> eq full   => {@putonpantiestextfull} {@putonpantiescomm}
+* <get underwearfullness> eq loaded   => {@putonpantiestextloaded} {@putonpantiescomm}
+
++ putonpantiestextempty
+- *She gets up and walks to her room, ass shaking in her {@equipunderwearpisscheacktext}<get underwear>{@equipunderwearbacktinycheacktext}. She comes back wearing a pair of red panties* Hope i wasn't to long *she sits back down on the couch*
+
++ putonpantiestextfull
+- *She gets up, <get underwear> bulging out from her ass, and walks to her room, shit covered ass shaking in her full {@equipunderwearpisscheacktext}<get underwear>{@equipunderwearbacktinycheacktext}. She comes back wearing red panties* All cleaned up! *she sits back down on the couch*
+
++ putonpantiestextloaded
+- *She gets up, <get underwear> bulging out from her ass, and walks to her room, shit covered ass shaking in her loaded {@equipunderwearpisscheacktext}<get underwear>{@equipunderwearbacktinycheacktext}. She comes back wearing red panties* All cleaned up! *she sits back down on the couch*
+
++ putonpantiescomm
+- <set backtiny=0><set fronttiny=0><set underwear=panties><set underwearwetness=dry>
