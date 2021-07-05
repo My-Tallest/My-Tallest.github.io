@@ -2,7 +2,7 @@
 layout: post
 title: "About Tallest"
 author: "Tallest"
-categories: facts
+categories: sample
 tags: [sample]
 image: sandra-1.jpg
 ---
