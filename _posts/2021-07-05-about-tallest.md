@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "About the Author"
+title: "About Tallest"
 author: "Tallest"
 categories: facts
 tags: [sample]
