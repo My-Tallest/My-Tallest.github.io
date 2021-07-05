@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Text Formatting"
-author: "Paul Le"
+title: "Fresh new website"
+author: "Tallest"
 categories: sample
 tags: [sample]
 image: sandra-1.jpg
